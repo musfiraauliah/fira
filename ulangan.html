@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Utama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #fbe4e2, #e0c3fc);
+      color: #5a345d;
+    }
+
+    header {
+      background: linear-gradient(to right, #fbe4e2, #e0c3fc);
+      text-align: center;
+      padding: 40px 20px;
+      color: #8b4d77;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.5rem; }
+
+    nav {
+      display: flex; justify-content: center;
+      background-color: #e0c3fc; border-bottom: 2px solid #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    nav label {
+      padding: 15px 30px; cursor: pointer;
+      font-weight: bold; font-size: 1.1rem;
+      color: #5a345d; transition: all .3s ease;
+    }
+    nav label:hover {
+      background-color: #fcd6d5; color: #8b4d77;
+      border-radius: 30px; transform: scale(1.05);
+    }
+
+    input[type="radio"] { display: none; }
+
+    section {
+      display: none; padding: 50px 25px;
+      text-align: center; animation: fadeIn .6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tampilkan section sesuai radio yang dipilih */
+    #beranda:checked ~ main #berandaSection,
+    #biodata:checked ~ main #biodataSection,
+    #kontak:checked ~ main #kontakSection,
+    #galeri:checked ~ main #galeriSection {
+      display: block;
+    }
+
+    h2 { font-size: 2rem; margin-bottom: 20px; color: #8b4d77; }
+    p  { font-size: 1.1rem; line-height: 1.6; }
+
+    img {
+      max-width: 100%; height: auto;
+      margin: 20px auto; display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #db7093; color: #fff;
+      text-align: center; padding: 20px;
+      margin-top: 60px; font-size: .95rem;
+      letter-spacing: .5px;
+    }
+
+    @media (max-width:600px){
+      nav { flex-direction: column; }
+      nav label { padding: 15px; }
+      header h1 { font-size: 2rem; }
+      section { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Radio Toggle Menu -->
+  <input type="radio" name="menu" id="beranda" checked>
+  <input type="radio" name="menu" id="biodata">
+  <input type="radio" name="menu" id="kontak">
+  <input type="radio" name="menu" id="galeri">
+
+  <!-- Header -->
+  <header>
+    <h1>✨ Selamat Datang Di Menu Utama!</h1>
+  </header>
+
+  <!-- Navigasi -->
+  <nav>
+    <label for="beranda">🏠 Beranda</label>
+    <label for="biodata">👩‍💼 Biodata</label>
+    <label for="kontak">📞 Kontak</label>
+    <label for="galeri">🖼️ Galeri</label>
+  </nav>
+
+  <!-- Konten -->
+  <main>
+    <section id="berandaSection">
+      <h2>🏡 Halaman Beranda</h2>
+      <p>Halo! Ini adalah halaman utama saya. Silakan menjelajahi menu untuk tahu lebih banyak tentang saya 😊</p>
+    </section>
+
+    <section id="biodataSection">
+      <h2>📄 Biodata Saya</h2>
+      <p>
+        Nama: Musfira Auliah<br>
+        Umur: 17 Tahun<br>
+        Asal: Bantaeng<br>
+        Hobi: Desain, Menulis, Coding
+      </p>
+    </section>
+
+    <section id="kontakSection">
+      <h2>📬 Kontak Saya</h2>
+      <p>
+        Email: <a href="mailto:musfiraaulia6@gmail.com">musfiraaulia6@gmail.com</a><br>
+        Instagram: <a href="https://instagram.com/__msfhraauliah" target="_blank">@__msfhraauliah</a><br>
+        WhatsApp: 08388041957
+      </p>
+    </section>
+
+    <section id="galeriSection">
+      <h2>🖼️ Galeri</h2>
+      <p>Berikut adalah beberapa foto dan momen favorit saya:</p>
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira1.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira2.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira3.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira4.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira5.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira6.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira7.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira8.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira11.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira12.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira13.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira14.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira25.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira15.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira16.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira17.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira18.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira19.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira22.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+      <img src="D:\Musfira Auliah 11 TJKT 4/fira23.jpeg" alt="Foto Musfira Auliah" width="170" height="140" align="center">
+
+      
+  </main>
+
+ 
+
+</body>
+</html>
